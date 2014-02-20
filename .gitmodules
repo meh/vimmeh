@@ -1,0 +1,201 @@
+[submodule "plugins/ack"]
+	path = plugins/ack
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "plugins/command-t"]
+	path = plugins/command-t
+	url = git://github.com/wincent/Command-T.git
+[submodule "plugins/nerdtree"]
+	path = plugins/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "syntax/coffeescript"]
+	path = syntax/coffeescript
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "syntax/css3"]
+	path = syntax/css3
+	url = git://github.com/hail2u/vim-css3-syntax.git
+[submodule "plugins/fugitive"]
+	path = plugins/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "syntax/haml"]
+	path = syntax/haml
+	url = git://github.com/tpope/vim-haml.git
+[submodule "syntax/javascript"]
+	path = syntax/javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule "syntax/markdown"]
+	path = syntax/markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "syntax/mustache"]
+	path = syntax/mustache
+	url = git://github.com/juvenn/mustache.vim.git
+[submodule "plugins/pathogen"]
+	path = plugins/pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "syntax/perl"]
+	path = syntax/perl
+	url = git://github.com/petdance/vim-perl.git
+[submodule "syntax/ruby"]
+	path = syntax/ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "plugins/tabular"]
+	path = plugins/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "plugins/textobj/ruby"]
+	path = plugins/textobj/ruby
+	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "plugins/textobj/user"]
+	path = plugins/textobj/user
+	url = git://github.com/kana/vim-textobj-user.git
+[submodule "plugins/unite"]
+	path = plugins/unite
+	url = git://github.com/Shougo/unite.vim.git
+[submodule "plugins/vimproc"]
+	path = plugins/vimproc
+	url = git://github.com/Shougo/vimproc.git
+[submodule "plugins/vimshell"]
+	path = plugins/vimshell
+	url = git://github.com/Shougo/vimshell.git
+[submodule "syntax/json"]
+	path = syntax/json
+	url = git://github.com/vim-scripts/JSON.vim.git
+[submodule "plugins/alias"]
+	path = plugins/alias
+	url = git://github.com/vim-scripts/cmdalias.vim.git
+[submodule "syntax/haskell"]
+	path = syntax/haskell
+	url = git://github.com/vim-scripts/haskell.vim.git
+[submodule "plugins/gundo"]
+	path = plugins/gundo
+	url = git://github.com/sjl/gundo.vim.git
+[submodule "plugins/vinarise"]
+	path = plugins/vinarise
+	url = git://github.com/Shougo/vinarise.git
+[submodule "plugins/neocomplcache"]
+	path = plugins/neocomplcache
+	url = git://github.com/Shougo/neocomplcache.git
+[submodule "plugins/unimpaired"]
+	path = plugins/unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "syntax/ooc"]
+	path = syntax/ooc
+	url = git://github.com/programble/ooc.vim.git
+[submodule "syntax/rfc"]
+	path = syntax/rfc
+	url = git://github.com/vim-scripts/rfc-syntax.git
+[submodule "plugins/tagbar"]
+	path = plugins/tagbar
+	url = git://github.com/majutsushi/tagbar
+[submodule "plugins/syntastic"]
+	path = plugins/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "plugins/rename/plugin"]
+	path = plugins/rename/plugin
+	url = git://github.com/ReekenX/vim-rename2.git
+[submodule "plugins/nerdcommenter"]
+	path = plugins/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "plugins/numbers"]
+	path = plugins/numbers
+	url = git://github.com/myusuf3/numbers.vim.git
+[submodule "plugins/easymotion"]
+	path = plugins/easymotion
+	url = git://github.com/vim-scripts/EasyMotion.git
+[submodule "plugins/surround"]
+	path = plugins/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "plugins/repeat"]
+	path = plugins/repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "syntax/protobuf"]
+	path = syntax/protobuf
+	url = git://github.com/uarun/vim-protobuf.git
+[submodule "syntax/ebnf"]
+	path = syntax/ebnf
+	url = git://github.com/vim-scripts/ebnf.vim.git
+[submodule "syntax/erlang"]
+	path = syntax/erlang
+	url = git://github.com/jimenezrick/vimerl.git
+[submodule "syntax/clojure"]
+	path = syntax/clojure
+	url = git://github.com/guns/vim-clojure-static.git
+[submodule "plugins/clojure"]
+	path = plugins/clojure
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "syntax/rainbow-parentheses"]
+	path = syntax/rainbow-parentheses
+	url = git://github.com/kien/rainbow_parentheses.vim.git
+[submodule "syntax/elixir"]
+	path = syntax/elixir
+	url = git://github.com/elixir-lang/vim-elixir.git
+[submodule "plugins/gnupg"]
+	path = plugins/gnupg
+	url = git://github.com/jamessan/vim-gnupg.git
+[submodule "syntax/athena"]
+	path = syntax/athena
+	url = git://github.com/itaka/vim-eathena.git
+[submodule "plugins/you-complete-me"]
+	path = plugins/you-complete-me
+	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "plugins/powerline"]
+	path = plugins/powerline
+	url = git://github.com/Lokaltog/powerline.git
+[submodule "syntax/cpp11"]
+	path = syntax/cpp11
+	url = git://github.com/vim-scripts/Cpp11-Syntax-Support.git
+[submodule "plugins/ri"]
+	path = plugins/ri
+	url = git://github.com/danchoi/ri.vim.git
+[submodule "plugins/gitgutter"]
+	path = plugins/gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "syntax/jam"]
+	path = syntax/jam
+	url = git://github.com/vim-scripts/jam.vim.git
+[submodule "plugins/multicursor"]
+	path = plugins/multicursor
+	url = git://github.com/paradigm/vim-multicursor.git
+[submodule "plugins/search-party"]
+	path = plugins/search-party
+	url = git://github.com/dahu/SearchParty.git
+[submodule "syntax/rust"]
+	path = syntax/rust
+	url = git://github.com/tonyseek/rust.vim.git
+[submodule "plugins/startify"]
+	path = plugins/startify
+	url = git://github.com/mhinz/vim-startify.git
+[submodule "plugins/rfc"]
+	path = plugins/rfc
+	url = git://github.com/mhinz/vim-rfc.git
+[submodule "plugins/projectroot"]
+	path = plugins/projectroot
+	url = git://github.com/dbakker/vim-projectroot.git
+[submodule "plugins/nerdtree-tabs"]
+	path = plugins/nerdtree-tabs
+	url = git://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "plugins/draw-it"]
+	path = plugins/draw-it
+	url = git://github.com/vim-scripts/DrawIt.git
+[submodule "plugins/signify"]
+	path = plugins/signify
+	url = git://github.com/mhinz/vim-signify.git
+[submodule "plugins/classpath"]
+	path = plugins/classpath
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "plugins/easy-align"]
+	path = plugins/easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "plugins/detectindent"]
+	path = plugins/detectindent
+	url = https://github.com/ciaranm/detectindent.git
+[submodule "syntax/less"]
+	path = syntax/less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "plugins/rainbow-parentheses"]
+	path = plugins/rainbow-parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "plugins/niji"]
+	path = plugins/niji
+	url = https://github.com/amdt/vim-niji.git
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = https://github.com/gmarik/vundle.git

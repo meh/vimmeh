@@ -1,0 +1,16 @@
+.netrwhist
+repl-port
+
+/tmp/undo/*
+!/tmp/undo/.keep
+
+/tmp/swap/*
+!/tmp/swap/.keep
+
+/tmp/backup/*
+!/tmp/backup/.keep
+
+doc/tags
+
+bundle/*
+!bundle/vundle
