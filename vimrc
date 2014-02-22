@@ -45,7 +45,6 @@ Bundle 'ReekenX/vim-rename2'
 
 " Syntax
 Bundle 'amdt/vim-niji'
-Bundle 'itaka/vim-eathena'
 Bundle 'guns/vim-clojure-static'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/Cpp11-Syntax-Support'
