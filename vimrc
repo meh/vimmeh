@@ -180,7 +180,7 @@ set wildmenu
 
 " Status line
 let s:last_window_id = 0
-function StatusLine:id(winnr)
+function StatusLine_id(winnr)
 	let r = getwinvar(a:winnr, 'window_id')
 
 	if empty(r)
@@ -191,14 +191,14 @@ function StatusLine:id(winnr)
 	endif
 
 	" Without this condition it triggers unneeded statusline redraw
-	if getwinvar(a:winnr, '&statusline') isnot# '%!StatusLine:render('.r.')'
-		call setwinvar(a:winnr, '&statusline', '%!StatusLine:render('.r.')')
+	if getwinvar(a:winnr, '&statusline') isnot# '%!StatusLine_render('.r.')'
+		call setwinvar(a:winnr, '&statusline', '%!StatusLine_render('.r.')')
 	endif
 
 	return r
 endfunction
 
-function StatusLine:git()
+function StatusLine_git()
 	if !exists('b:git_dir')
 		return
 	endif
@@ -238,7 +238,7 @@ function StatusLine:git()
   endtry
 endfunction
 
-function StatusLine:entry(current, bufnr)
+function StatusLine_entry(current, bufnr)
 	let render = ''
 
 	if a:bufnr == -1
@@ -280,12 +280,12 @@ function StatusLine:entry(current, bufnr)
 	return render
 endfunction
 
-function StatusLine:render:help(winnr, bufnr, current)
+function StatusLine_render_help(winnr, bufnr, current)
 	let left    = ""
 	let right   = ""
 
 	let left .= "["
-	let left .= StatusLine:entry(a:current, -1)
+	let left .= StatusLine_entry(a:current, -1)
 	let left .= " %1*%{expand('%:t:r')}%*"
 	let left .= "] "
 
@@ -295,26 +295,26 @@ function StatusLine:render:help(winnr, bufnr, current)
 	return left . "%=" . right
 endfunction
 
-function StatusLine:render:none(winnr)
+function StatusLine_render_none(winnr)
 	return repeat('─', winwidth(a:winnr))
 endfunction
 
-function StatusLine:render:normal(winnr, bufnr, current)
+function StatusLine_render_normal(winnr, bufnr, current)
 	let left    = ""
 	let right   = ""
 
 	if strlen(bufname(a:bufnr))
-		let entry = StatusLine:entry(a:current, a:bufnr)
+		let entry = StatusLine_entry(a:current, a:bufnr)
 
 		let left .= "["
-		let left .= StatusLine:entry(a:current, a:bufnr)
+		let left .= StatusLine_entry(a:current, a:bufnr)
 		if strlen(l:entry)
 			let left .= " "
 		endif
 		let left .= "%2*%{substitute(expand('%:h'), expand('$HOME'), '~', 'g')}/%1*%{expand('%:t')}%*"
 		let left .= "] "
 	else
-		let left .= "[" . StatusLine:entry(a:current, a:bufnr) . "] "
+		let left .= "[" . StatusLine_entry(a:current, a:bufnr) . "] "
 	endif
 
 	let git_head   = getbufvar(a:bufnr, 'git_head')
@@ -364,33 +364,33 @@ function StatusLine:render:normal(winnr, bufnr, current)
 	return left . "%=" . right
 endfunction
 
-function StatusLine:render(window_id)
-	let winnr   = index(map(range(1, winnr('$')), 'StatusLine:id(v:val)'), a:window_id) + 1
+function StatusLine_render(window_id)
+	let winnr   = index(map(range(1, winnr('$')), 'StatusLine_id(v:val)'), a:window_id) + 1
 	let bufnr   = winbufnr(l:winnr)
 	let current = w:window_id is# a:window_id
 
 	if getwinvar(l:winnr, '&filetype') == 'help'
-		return StatusLine:render:help(l:winnr, l:bufnr, l:current)
+		return StatusLine_render_help(l:winnr, l:bufnr, l:current)
 	elseif bufname(l:bufnr) =~ "NERD_tree" || bufname(l:bufnr) =~ "Tagbar" || getwinvar(l:winnr, '&filetype') == 'startify'
-		return StatusLine:render:none(l:winnr)
+		return StatusLine_render_none(l:winnr)
 	else
-		return StatusLine:render:normal(l:winnr, l:bufnr, l:current)
+		return StatusLine_render_normal(l:winnr, l:bufnr, l:current)
 	endif
 endfunction
 
-function StatusLine:new()
-	call map(range(1, winnr('$')), 'StatusLine:id(v:val)')
+function StatusLine_new()
+	call map(range(1, winnr('$')), 'StatusLine_id(v:val)')
 endfunction
 
-autocmd BufWritePost * call StatusLine:git()
-autocmd BufReadPost *  call StatusLine:git()
-autocmd WinEnter *  call StatusLine:git()
-autocmd VimEnter * call StatusLine:git()
+autocmd BufWritePost * call StatusLine_git()
+autocmd BufReadPost *  call StatusLine_git()
+autocmd WinEnter *  call StatusLine_git()
+autocmd VimEnter * call StatusLine_git()
 
 set showmode
 set laststatus=2
-set statusline=%!StatusLine:new()
-call StatusLine:new()
+set statusline=%!StatusLine_new()
+call StatusLine_new()
 
 " Commands
 command! -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http://sprunge.us | head -n 1 | tr -d '\r\n ' | DISPLAY=:0.0 xclip
