@@ -66,6 +66,7 @@ Bundle 'uarun/vim-protobuf'
 Bundle 'vim-scripts/rfc-syntax'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tonyseek/rust.vim'
+Bundle 'cespare/vim-toml'
 
 syntax enable
 filetype plugin indent on
