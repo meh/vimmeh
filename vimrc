@@ -10,7 +10,9 @@ runtime macros/matchit.vim
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Bundle 'mileszs/ack.vim'
@@ -65,8 +67,10 @@ Bundle 'petdance/vim-perl'
 Bundle 'uarun/vim-protobuf'
 Bundle 'vim-scripts/rfc-syntax'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tonyseek/rust.vim'
+Bundle 'rust-lang/rust', { 'rtp': 'src/etc/vim' }
 Bundle 'cespare/vim-toml'
+
+call vundle#end()
 
 syntax enable
 filetype plugin indent on
@@ -443,6 +447,9 @@ nmap <Leader>R :YcmCompleter ClearCompilationFlagCache<CR>:YcmForceCompileAndDia
 nmap <Leader>S :SyntasticCheck<CR>
 
 vnoremap <silent> <Enter> :EasyAlign<CR>
+
+" Rust syntax
+let g:rust_recommended_style = 0
 
 " delimitMate
 let g:delimitMate_no_esc_mapping = 1
