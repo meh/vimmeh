@@ -9,66 +9,66 @@ set nocompatible
 runtime macros/matchit.vim
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-classpath'
-Bundle 'tpope/vim-fireplace'
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'ciaranm/detectindent'
-Bundle 'vim-scripts/DrawIt'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'tpope/vim-fugitive'
-Bundle 'jamessan/vim-gnupg'
-Bundle 'sjl/gundo.vim'
-Bundle 'paradigm/vim-multicursor'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'dbakker/vim-projectroot'
-Bundle 'tpope/vim-repeat'
-Bundle 'mhinz/vim-rfc'
-Bundle 'mhinz/vim-signify'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'kana/vim-textobj-user'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell'
-Bundle 'Shougo/vinarise'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'ReekenX/vim-rename2'
+Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-classpath'
+Plugin 'tpope/vim-fireplace'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'ciaranm/detectindent'
+Plugin 'vim-scripts/DrawIt'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'sjl/gundo.vim'
+Plugin 'paradigm/vim-multicursor'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'dbakker/vim-projectroot'
+Plugin 'tpope/vim-repeat'
+Plugin 'mhinz/vim-rfc'
+Plugin 'mhinz/vim-signify'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'kana/vim-textobj-user'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc'
+Plugin 'Shougo/vimshell'
+Plugin 'Shougo/vinarise'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ReekenX/vim-rename2'
 
 " Syntax
-Bundle 'amdt/vim-niji'
-Bundle 'guns/vim-clojure-static'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'vim-scripts/Cpp11-Syntax-Support'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'vim-scripts/ebnf.vim'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'jimenezrick/vimerl'
-Bundle 'tpope/vim-haml'
-Bundle 'vim-scripts/haskell.vim'
-Bundle 'vim-scripts/jam.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/JSON.vim'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-markdown'
-Bundle 'juvenn/mustache.vim'
-Bundle 'programble/ooc.vim'
-Bundle 'petdance/vim-perl'
-Bundle 'uarun/vim-protobuf'
-Bundle 'vim-scripts/rfc-syntax'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'rust-lang/rust', { 'rtp': 'src/etc/vim' }
-Bundle 'cespare/vim-toml'
+Plugin 'raymond-w-ko/vim-niji'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-scripts/Cpp11-Syntax-Support'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'vim-scripts/ebnf.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'jimenezrick/vimerl'
+Plugin 'tpope/vim-haml'
+Plugin 'vim-scripts/haskell.vim'
+Plugin 'vim-scripts/jam.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-scripts/JSON.vim'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-markdown'
+Plugin 'juvenn/mustache.vim'
+Plugin 'programble/ooc.vim'
+Plugin 'petdance/vim-perl'
+Plugin 'uarun/vim-protobuf'
+Plugin 'vim-scripts/rfc-syntax'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
 
 call vundle#end()
 
@@ -494,13 +494,6 @@ let g:ycm_filetype_blacklist = {
 	\ 'gitcommit': 1,
 	\ 'mail': 1,
 \}
-
-" gitgutter
-let g:gitgutter_all_on_focusgained = 0
-let g:gitgutter_eager = 0
-
-" au VimEnter * GitGutterEnable
-" au WinEnter * call GitGutter(expand('%:p'))
 
 " Signify
 let g:signify_sign_overwrite = 1
