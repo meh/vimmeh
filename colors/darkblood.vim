@@ -110,13 +110,39 @@ hi link clojureSpecial Keyword
 " JavaScript
 hi link jsIdentifier Normal
 
+" Java
+hi link javaScopeDecl Statement
+hi link javaStorageClass Specifier
+hi link javaClassDecl Statement
+hi link javaMethodDecl Statement
+hi link javaExternal Statement
+
 " C
 hi link cStructure Keyword
 hi link cStorageClass Keyword
+hi link Member PreProc
+hi link EnumConstant Constant
 
 " C++
 hi link cppStructure Keyword
 hi link cppStorageClass Keywords
+
+" D
+hi link dScopeDecl Statement
+hi link dEnum Statement
+hi link dStructure Statement
+hi link dTypedef Specifier
+hi link dStorageClass Specifier
+hi link dAttribute Specifier
+hi link dAnnotation Statement
+hi link dVersionIdentifier Specifier
+hi link dTraitsIdentifier Specifier
+hi link dDebug Statement
+
+" Rust
+hi link rustStorage Specifier
+hi link rustSelf    Specifier
+hi link rustSigil   Specifier
 
 " Haskell
 hi link hsModuleName Type
@@ -153,6 +179,7 @@ hi PreProc     cterm=none ctermfg=white    ctermbg=none
 hi Constant    cterm=none ctermfg=darkred  ctermbg=none
 hi Type        cterm=none ctermfg=124      ctermbg=none
 hi Statement   cterm=bold ctermfg=white    ctermbg=none
+hi Specifier   cterm=bold ctermfg=124      ctermbg=none
 hi Identifier  cterm=none ctermfg=124      ctermbg=none
 hi Ignore      cterm=none ctermfg=darkgray ctermbg=none
 hi Special     cterm=none ctermfg=darkred  ctermbg=none
