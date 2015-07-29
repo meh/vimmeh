@@ -47,6 +47,8 @@ Plugin 'ReekenX/vim-rename2'
 
 " Syntax
 Plugin 'raymond-w-ko/vim-niji'
+Plugin 'jeaye/color_coded'
+Plugin 'beyondmarc/glsl.vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'vim-scripts/Cpp11-Syntax-Support'
@@ -85,9 +87,6 @@ if &term =~ "rxvt"
 	exec "set <kPageUp>=\<ESC>[5^"
 	exec "set <kPageDown>=\<ESC>[6^"
 endif
-
-nnoremap <F1> :call NumbersToggle()<CR>
-imap <F1> <C-o>:call NumbersToggle()<CR>
 
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
@@ -143,7 +142,7 @@ set novisualbell
 set magic
 set hidden
 set shortmess=atI
-set wildignore+=*.o,*.obj,.git,*.a,*.so,*.lo,*.class,*.beam,deps/*,Mnesia.*,*.hi,vendor/*,copycat/*
+set wildignore+=*.o,*.obj,.git,*.a,*.so,*.lo,*.class,*.beam,deps/*,Mnesia.*,*.hi,vendor/*,copycat/*,target/*
 let mapleader="ò"
 set notimeout
 set ttimeout
@@ -455,7 +454,7 @@ let g:rust_recommended_style = 0
 let g:delimitMate_no_esc_mapping = 1
 
 " NERDTree
-let NERDTreeIgnore=['\.so$', '\.o$', '\.la$', '\.a$', '\.class$', '\~$', '\.beam$', '^Mnesia.', 'deps/', '\.hi$', 'vendor/']
+let NERDTreeIgnore=['\.so$', '\.o$', '\.la$', '\.a$', '\.class$', '\~$', '\.beam$', '^Mnesia.', 'deps/', '\.hi$', 'vendor/', 'target/']
 
 " Syntastic
 let g:syntastic_enable_signs         = 1
@@ -539,6 +538,19 @@ let g:startify_skiplist = [
              \ 'bundle/.*/doc' ,
              \ 'vimpager'
              \ ]
+
+" vimpager
+let vimpager_disable_x11 = 1
+
+if exists("vimpager")
+	set statusline=\ 
+	set fillchars=stl:\ ,stlnc:\ ,vert:\ ,fold:\ 
+	set listchars=tab:\ \ ,trail:\ ,extends:\ ,precedes:\ 
+	set list
+	set laststatus=0
+	set norelativenumber
+	set nonumber
+endif
 
 " vimshell
 let g:vimshell_environment_term       = 'rxvt-256color'
