@@ -102,6 +102,9 @@ hi link xmlEndTag Function
 hi diffIdentical cterm=none ctermfg=white ctermbg=none
 hi diffAdded     cterm=none ctermfg=darkgreen ctermbg=none
 
+" Python
+hi link pythonInclude Statement
+
 " Clojure
 hi link clojureKeyword Constant
 hi link clojureVariable Identifier
@@ -151,6 +154,7 @@ hi link hsStructure Keyword
 hi link hsTypedef Keyword
 hi link hsModuleStartLabel Keyword
 hi link hsImportLabel Keyword
+hi link hsVarSym Statement
 
 " gitgutter
 hi GitGutterAdd           cterm=none ctermfg=2   ctermbg=none
