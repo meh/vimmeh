@@ -36,6 +36,7 @@ augroup filetypedetect
 	autocmd BufRead,BufNewFile *.yrl setlocal ft=erlang
 	autocmd BufRead,BufNewFile *.xrl setlocal ft=erlang
 	autocmd BufRead,BufNewFile *.reds,*.red,*.r setlocal ft=rebol
+	autocmd BufRead,BufNewFile *.jad setlocal ft=java
 augroup END
 
 autocmd BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
