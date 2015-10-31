@@ -44,10 +44,10 @@ Plugin 'Shougo/vimshell'
 Plugin 'Shougo/vinarise'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ReekenX/vim-rename2'
+Plugin 'vim-scripts/JavaDecompiler.vim'
 
 " Syntax
 Plugin 'raymond-w-ko/vim-niji'
-Plugin 'jeaye/color_coded'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kchmck/vim-coffee-script'
