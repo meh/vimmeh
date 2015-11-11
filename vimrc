@@ -47,6 +47,7 @@ Plugin 'ReekenX/vim-rename2'
 Plugin 'vim-scripts/JavaDecompiler.vim'
 
 " Syntax
+Plugin 'meh/nohomo'
 Plugin 'raymond-w-ko/vim-niji'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'guns/vim-clojure-static'
