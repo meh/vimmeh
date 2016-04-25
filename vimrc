@@ -25,6 +25,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'sjl/gundo.vim'
+"Plugin 'hsanson/vim-android'
 Plugin 'paradigm/vim-multicursor'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -35,19 +36,24 @@ Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'kana/vim-textobj-user'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/vimshell'
 Plugin 'Shougo/vinarise'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'ReekenX/vim-rename2'
+Plugin 'tpope/vim-eunuch'
 Plugin 'vim-scripts/JavaDecompiler.vim'
+Plugin 'vim-scripts/vim-gradle'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'bps/vim-tshark'
 
 " Syntax
-Plugin 'meh/nohomo'
+"Plugin 'meh/nohomo'
+Plugin 'udalov/kotlin-vim'
+Plugin 'shiracamus/vim-syntax-x86-objdump-d'
+Plugin 'vim-scripts/proguard.vim'
 Plugin 'raymond-w-ko/vim-niji'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'guns/vim-clojure-static'
@@ -179,6 +185,7 @@ set noexpandtab
 set modeline
 set tildeop
 set cpoptions+=$
+set backspace=2
 
 set wildmode=longest:full
 set wildmenu
@@ -387,10 +394,10 @@ function StatusLine_new()
 	call map(range(1, winnr('$')), 'StatusLine_id(v:val)')
 endfunction
 
-autocmd BufWritePost * call StatusLine_git()
-autocmd BufReadPost *  call StatusLine_git()
-autocmd WinEnter *  call StatusLine_git()
-autocmd VimEnter * call StatusLine_git()
+"autocmd BufWritePost * call StatusLine_git()
+"autocmd BufReadPost *  call StatusLine_git()
+"autocmd WinEnter *  call StatusLine_git()
+"autocmd VimEnter * call StatusLine_git()
 
 set showmode
 set laststatus=2
@@ -457,6 +464,9 @@ let g:delimitMate_no_esc_mapping = 1
 " NERDTree
 let NERDTreeIgnore=['\.so$', '\.o$', '\.la$', '\.a$', '\.class$', '\~$', '\.beam$', '^Mnesia.', 'deps/', '\.hi$', 'vendor/', 'target/']
 
+" NoHomo
+let g:nohomo_ignore_filetype = ['mail', 'markdown', 'scss', 'mustache']
+
 " Syntastic
 let g:syntastic_enable_signs         = 1
 let g:syntastic_error_symbol         = '!!'
@@ -484,6 +494,8 @@ let g:ycm_key_list_select_completion   = ['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<Leader><Tab>', '<Up>']
 
 let g:ycm_min_num_of_chars_for_completion = 3
+
+let g:ycm_rust_src_path = '/home/meh/projects/nih/rust'
 
 set completeopt=menuone
 
@@ -570,3 +582,8 @@ let g:vinarise_detect_large_file_size = -1
 autocmd FileType vinarise
 	\  nmap <buffer> <C-l> :wincmd l<CR>
 	\| nmap <buffer> <C-c> <Plug>(vinarise_redraw)
+
+" gist
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_browser_command = 'echo %URL% | xclip'

@@ -142,10 +142,20 @@ hi link dVersionIdentifier Specifier
 hi link dTraitsIdentifier Specifier
 hi link dDebug Statement
 
+" SASS
+hi link sassClass cssClassName
+hi link sassClassChar cssClassNameDot
+
 " Rust
 hi link rustStorage Specifier
 hi link rustSelf    Specifier
 hi link rustSigil   Specifier
+
+" Kotlin
+autocmd Syntax kotlin
+	\  hi link ktInclude Statement
+	\| hi link ktModifier Statement
+	\| hi link ktStructure Specifier
 
 " Haskell
 hi link hsModuleName Type

@@ -13,7 +13,7 @@ def FlagsForFile(filename, **kwargs):
   elif filetype == 'cpp':
     flags = ['-xc++', '-Wall', '-Wextra', '-pipe'] + prepare(data['g:syntastic_cpp_compiler_options'])
   elif filetype == 'cpp11':
-    flags = ['-xc++', '-std=c++11', '-Wall', '-Wextra', '-pipe'] + prepare(data['g:syntastic_cpp_compiler_options'])
+    flags = ['-xc++', '-std=c++14', '-Wall', '-Wextra', '-pipe'] + prepare(data['g:syntastic_cpp_compiler_options'])
 
   return {
     'flags':    flags,
