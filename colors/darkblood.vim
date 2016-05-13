@@ -23,84 +23,84 @@ if &term =~ "rxvt"
 endif
 
 " General colors
-hi Normal        cterm=none      ctermfg=251       ctermbg=none
-hi Directory     cterm=none      ctermfg=red       ctermbg=none
-hi ErrorMsg      cterm=none      ctermfg=darkred   ctermbg=none
-hi NonText       cterm=none      ctermfg=darkgray  ctermbg=none
-hi SpecialKey    cterm=none      ctermfg=236       ctermbg=none
-hi LineNr        cterm=none      ctermfg=darkgrey  ctermbg=none
+hi Normal        cterm=NONE      ctermfg=251       ctermbg=NONE
+hi Directory     cterm=NONE      ctermfg=red       ctermbg=NONE
+hi ErrorMsg      cterm=NONE      ctermfg=darkred   ctermbg=NONE
+hi NonText       cterm=NONE      ctermfg=darkgray  ctermbg=NONE
+hi SpecialKey    cterm=NONE      ctermfg=236       ctermbg=NONE
+hi LineNr        cterm=NONE      ctermfg=darkgrey  ctermbg=NONE
 hi IncSearch     cterm=bold      ctermfg=232       ctermbg=darkred
 hi Search        cterm=bold      ctermfg=232       ctermbg=darkred
-hi Visual        cterm=none      ctermfg=white     ctermbg=darkred
-hi VisualNOS     cterm=none      ctermfg=white     ctermbg=darkred
-hi MoreMsg       cterm=bold      ctermfg=white     ctermbg=none
-hi Question      cterm=bold      ctermfg=white     ctermbg=none
-hi WarningMsg    cterm=none      ctermfg=darkred   ctermbg=none
-hi WildMenu      cterm=none      ctermfg=white     ctermbg=none
-hi TabLine       cterm=underline ctermfg=white     ctermbg=none
+hi Visual        cterm=NONE      ctermfg=white     ctermbg=darkred
+hi VisualNOS     cterm=NONE      ctermfg=white     ctermbg=darkred
+hi MoreMsg       cterm=bold      ctermfg=white     ctermbg=NONE
+hi Question      cterm=bold      ctermfg=white     ctermbg=NONE
+hi WarningMsg    cterm=NONE      ctermfg=darkred   ctermbg=NONE
+hi WildMenu      cterm=NONE      ctermfg=white     ctermbg=NONE
+hi TabLine       cterm=underline ctermfg=white     ctermbg=NONE
 hi TabLineSel    cterm=underline ctermfg=white     ctermbg=darkred
-hi TabLineFill   cterm=underline ctermfg=white     ctermbg=none
-hi DiffAdd       cterm=none      ctermfg=white     ctermbg=darkgreen
-hi DiffChange    cterm=underline ctermfg=none      ctermbg=none
-hi DiffDelete    cterm=none      ctermfg=white     ctermbg=darkred
-hi DiffText      cterm=none      ctermfg=white     ctermbg=none
-hi SignColumn    cterm=none      ctermfg=darkred   ctermbg=none
-hi VertSplit     cterm=none      ctermfg=darkred   ctermbg=none
-hi CursorColumn  cterm=none      ctermfg=none      ctermbg=233
-hi CursorLineNr  cterm=none      ctermfg=none      ctermbg=233
-hi CursorLine    cterm=none      ctermfg=none      ctermbg=233
-hi ColorColumn   cterm=none      ctermfg=none      ctermbg=233
-hi Cursor        cterm=none      ctermfg=white     ctermbg=darkred
-hi Title         cterm=bold      ctermfg=white     ctermbg=none
-hi Pmenu         cterm=none      ctermfg=none      ctermbg=233
+hi TabLineFill   cterm=underline ctermfg=white     ctermbg=NONE
+hi DiffAdd       cterm=NONE      ctermfg=white     ctermbg=darkgreen
+hi DiffChange    cterm=underline ctermfg=NONE      ctermbg=NONE
+hi DiffDelete    cterm=NONE      ctermfg=white     ctermbg=darkred
+hi DiffText      cterm=NONE      ctermfg=white     ctermbg=NONE
+hi SignColumn    cterm=NONE      ctermfg=darkred   ctermbg=NONE
+hi VertSplit     cterm=NONE      ctermfg=darkred   ctermbg=NONE
+hi CursorColumn  cterm=NONE      ctermfg=NONE      ctermbg=233
+hi CursorLineNr  cterm=NONE      ctermfg=NONE      ctermbg=233
+hi CursorLine    cterm=NONE      ctermfg=NONE      ctermbg=233
+hi ColorColumn   cterm=NONE      ctermfg=NONE      ctermbg=233
+hi Cursor        cterm=NONE      ctermfg=white     ctermbg=darkred
+hi Title         cterm=bold      ctermfg=white     ctermbg=NONE
+hi Pmenu         cterm=NONE      ctermfg=NONE      ctermbg=233
 hi PmenuSel      cterm=bold      ctermfg=white     ctermbg=darkred
-hi PmenuSbar     cterm=none      ctermfg=233       ctermbg=233
-hi PmenuThumb    cterm=none      ctermfg=darkred   ctermbg=darkred
-hi Folded        cterm=none      ctermfg=darkred   ctermbg=none
-hi FoldColumn    cterm=none      ctermfg=darkred   ctermbg=none
-hi MatchParen    cterm=reverse   ctermfg=none      ctermbg=none
+hi PmenuSbar     cterm=NONE      ctermfg=233       ctermbg=233
+hi PmenuThumb    cterm=NONE      ctermfg=darkred   ctermbg=darkred
+hi Folded        cterm=NONE      ctermfg=darkred   ctermbg=NONE
+hi FoldColumn    cterm=NONE      ctermfg=darkred   ctermbg=NONE
+hi MatchParen    cterm=reverse   ctermfg=NONE      ctermbg=NONE
 
 " Status line
-hi StatusLine    cterm=none ctermfg=darkred ctermbg=none
-hi StatusLineNC  cterm=none ctermfg=darkred ctermbg=black
-hi ModeMsg       cterm=bold ctermfg=white   ctermbg=none
+hi StatusLine    cterm=NONE ctermfg=darkred ctermbg=NONE
+hi StatusLineNC  cterm=NONE ctermfg=darkred ctermbg=black
+hi ModeMsg       cterm=bold ctermfg=white   ctermbg=NONE
 
-hi User1 cterm=bold ctermfg=white ctermbg=none
-hi User2 cterm=none ctermfg=white ctermbg=none
-hi User3 cterm=bold ctermfg=237   ctermbg=none
-hi User4 cterm=bold ctermfg=220   ctermbg=none
-hi User5 cterm=bold ctermfg=34    ctermbg=none
-hi User6 cterm=bold ctermfg=160   ctermbg=none
+hi User1 cterm=bold ctermfg=white ctermbg=NONE
+hi User2 cterm=NONE ctermfg=white ctermbg=NONE
+hi User3 cterm=bold ctermfg=237   ctermbg=NONE
+hi User4 cterm=bold ctermfg=220   ctermbg=NONE
+hi User5 cterm=bold ctermfg=34    ctermbg=NONE
+hi User6 cterm=bold ctermfg=160   ctermbg=NONE
 
 " tty
 if &term =~ "linux"
-	hi TabLine       cterm=none ctermfg=white ctermbg=none
-	hi TabLineSel    cterm=none ctermfg=white ctermbg=darkred
-	hi TabLineFill   cterm=none ctermfg=white ctermbg=none
-	hi StatusLine    cterm=none ctermfg=black ctermbg=darkred
-	hi StatusLineNC  cterm=none ctermfg=white ctermbg=none
+	hi TabLine       cterm=NONE ctermfg=white ctermbg=NONE
+	hi TabLineSel    cterm=NONE ctermfg=white ctermbg=darkred
+	hi TabLineFill   cterm=NONE ctermfg=white ctermbg=NONE
+	hi StatusLine    cterm=NONE ctermfg=black ctermbg=darkred
+	hi StatusLineNC  cterm=NONE ctermfg=white ctermbg=NONE
 endif
 
 " syntastic
-hi SyntasticError   cterm=none      ctermfg=white ctermbg=darkred
-hi SyntasticWarning cterm=underline ctermfg=white ctermbg=none
+hi SyntasticError   cterm=NONE      ctermfg=white ctermbg=darkred
+hi SyntasticWarning cterm=underline ctermfg=white ctermbg=NONE
 
 " Taglist
-hi TagListFileName cterm=none ctermfg=darkred ctermbg=none
+hi TagListFileName cterm=NONE ctermfg=darkred ctermbg=NONE
 
 " Tagbar
-hi TagbarVisibilityPublic cterm=bold ctermfg=white ctermbg=none
+hi TagbarVisibilityPublic cterm=bold ctermfg=white ctermbg=NONE
 
 " ctrlp
-hi CtrlPMatch cterm=underline ctermfg=white     ctermbg=none
-hi CtrlPStats cterm=none ctermfg=black ctermbg=darkred
+hi CtrlPMatch cterm=underline ctermfg=white     ctermbg=NONE
+hi CtrlPStats cterm=NONE ctermfg=black ctermbg=darkred
 
 " XML
 hi link xmlEndTag Function
 
 " Diff
-hi diffIdentical cterm=none ctermfg=white ctermbg=none
-hi diffAdded     cterm=none ctermfg=darkgreen ctermbg=none
+hi diffIdentical cterm=NONE ctermfg=white ctermbg=NONE
+hi diffAdded     cterm=NONE ctermfg=darkgreen ctermbg=NONE
 
 " Python
 hi link pythonInclude Statement
@@ -167,10 +167,10 @@ hi link hsImportLabel Keyword
 hi link hsVarSym Statement
 
 " gitgutter
-hi GitGutterAdd           cterm=none ctermfg=2   ctermbg=none
-hi GitGutterChange        cterm=none ctermfg=220 ctermbg=none
-hi GitGutterDelete        cterm=none ctermfg=1   ctermbg=none
-hi GitGutterChangeDelete  cterm=none ctermfg=1   ctermbg=none
+hi GitGutterAdd           cterm=NONE ctermfg=2   ctermbg=NONE
+hi GitGutterChange        cterm=NONE ctermfg=220 ctermbg=NONE
+hi GitGutterDelete        cterm=NONE ctermfg=1   ctermbg=NONE
+hi GitGutterChangeDelete  cterm=NONE ctermfg=1   ctermbg=NONE
 
 let g:gitgutter_sign_added="+"
 let g:gitgutter_sign_modified="~"
@@ -178,9 +178,9 @@ let g:gitgutter_sign_removed="-"
 let g:gitgutter_sign_modified_removed="~"
 
 " Signify
-highlight SignifySignAdd    cterm=none ctermbg=none  ctermfg=2
-highlight SignifySignDelete cterm=none ctermbg=none  ctermfg=1
-highlight SignifySignChange cterm=none ctermbg=none  ctermfg=3
+highlight SignifySignAdd    cterm=NONE ctermbg=NONE  ctermfg=2
+highlight SignifySignDelete cterm=NONE ctermbg=NONE  ctermfg=1
+highlight SignifySignChange cterm=NONE ctermbg=NONE  ctermfg=3
 
 let g:signify_sign_add               = '+'
 let g:signify_sign_change            = '±'
@@ -188,21 +188,21 @@ let g:signify_sign_delete            = '-'
 let g:signify_sign_delete_first_line = '^'
 
 " syntax
-hi Comment     cterm=none ctermfg=darkgrey ctermbg=none
-hi PreProc     cterm=none ctermfg=white    ctermbg=none
-hi Constant    cterm=none ctermfg=darkred  ctermbg=none
-hi Type        cterm=none ctermfg=124      ctermbg=none
-hi Statement   cterm=bold ctermfg=white    ctermbg=none
-hi Specifier   cterm=bold ctermfg=124      ctermbg=none
-hi Identifier  cterm=none ctermfg=124      ctermbg=none
-hi Ignore      cterm=none ctermfg=darkgray ctermbg=none
-hi Special     cterm=none ctermfg=darkred  ctermbg=none
-hi Error       cterm=none ctermfg=white    ctermbg=darkred
-hi Todo        cterm=none ctermfg=white    ctermbg=darkred
-hi Underlined  cterm=none ctermfg=darkred  ctermbg=none
-hi Number      cterm=none ctermfg=darkred  ctermbg=none
-hi Function    cterm=none ctermfg=white    ctermbg=none
-hi Define      cterm=bold ctermfg=white    ctermbg=none
+hi Comment     cterm=NONE ctermfg=darkgrey ctermbg=NONE
+hi PreProc     cterm=NONE ctermfg=white    ctermbg=NONE
+hi Constant    cterm=NONE ctermfg=darkred  ctermbg=NONE
+hi Type        cterm=NONE ctermfg=124      ctermbg=NONE
+hi Statement   cterm=bold ctermfg=white    ctermbg=NONE
+hi Specifier   cterm=bold ctermfg=124      ctermbg=NONE
+hi Identifier  cterm=NONE ctermfg=124      ctermbg=NONE
+hi Ignore      cterm=NONE ctermfg=darkgray ctermbg=NONE
+hi Special     cterm=NONE ctermfg=darkred  ctermbg=NONE
+hi Error       cterm=NONE ctermfg=white    ctermbg=darkred
+hi Todo        cterm=NONE ctermfg=white    ctermbg=darkred
+hi Underlined  cterm=NONE ctermfg=darkred  ctermbg=NONE
+hi Number      cterm=NONE ctermfg=darkred  ctermbg=NONE
+hi Function    cterm=NONE ctermfg=white    ctermbg=NONE
+hi Define      cterm=bold ctermfg=white    ctermbg=NONE
 
 hi link String          Constant
 hi link Character       Constant
