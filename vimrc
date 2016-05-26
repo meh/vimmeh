@@ -48,6 +48,7 @@ Plugin 'vim-scripts/vim-gradle'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'bps/vim-tshark'
+Plugin 'slashmili/alchemist.vim'
 
 " Syntax
 "Plugin 'meh/nohomo'
