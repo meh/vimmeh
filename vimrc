@@ -22,6 +22,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'ciaranm/detectindent'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'sjl/gundo.vim'
@@ -32,6 +33,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'dbakker/vim-projectroot'
 Plugin 'tpope/vim-repeat'
 Plugin 'mhinz/vim-rfc'
+Plugin 'tpope/vim-characterize'
 Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
@@ -49,6 +51,8 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'bps/vim-tshark'
 Plugin 'slashmili/alchemist.vim'
+Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-speeddating'
 
 " Syntax
 "Plugin 'meh/nohomo'
@@ -152,7 +156,8 @@ set magic
 set hidden
 set shortmess=atI
 set wildignore+=*.o,*.obj,.git,*.a,*.so,*.lo,*.class,*.beam,deps/*,Mnesia.*,*.hi,vendor/*,copycat/*,target/*
-let mapleader="ò"
+let mapleader=";"
+let maplocaleader="\\"
 set notimeout
 set ttimeout
 set ttimeoutlen=10
