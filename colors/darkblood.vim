@@ -22,6 +22,13 @@ if &term =~ "rxvt"
   set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 endif
 
+if &term =~ "cancer"
+  silent !echo -ne "\0235cursor:bg:\#404040\0234"
+  let &t_SI = "\235cursor:bg:-\234"
+  let &t_EI = "\235cursor:bg:\#404040\234"
+  autocmd VimLeave * :silent !echo -ne "\0235cursor:bg:-\0234"
+endif
+
 " General colors
 hi Normal        cterm=NONE      ctermfg=251       ctermbg=NONE
 hi Directory     cterm=NONE      ctermfg=red       ctermbg=NONE
@@ -150,6 +157,7 @@ hi link sassClassChar cssClassNameDot
 hi link rustStorage Specifier
 hi link rustSelf    Specifier
 hi link rustSigil   Specifier
+hi link rustQuestionMark Error
 
 " Kotlin
 autocmd Syntax kotlin
