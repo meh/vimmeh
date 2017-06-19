@@ -26,6 +26,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'sjl/gundo.vim'
+Plugin 'lervag/vimtex'
 "Plugin 'hsanson/vim-android'
 Plugin 'mattn/calendar-vim'
 Plugin 'vim-scripts/SyntaxRange'
@@ -55,6 +56,8 @@ Plugin 'bps/vim-tshark'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
+Plugin 'dbeniamine/vim-mail'
+Plugin 'metakirby5/codi.vim'
 
 " Syntax
 "Plugin 'meh/nohomo'
@@ -86,6 +89,7 @@ Plugin 'vim-scripts/rfc-syntax'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'enomsg/vim-haskellConcealPlus'
 
 call vundle#end()
 
@@ -143,6 +147,7 @@ augroup END
 
 au VimResized * :wincmd =
 
+set nocp
 set shell=zsh
 set mouse=
 set directory=~/.vim/tmp/swap
@@ -155,9 +160,11 @@ set undoreload=10000
 set noerrorbells
 set novisualbell
 set magic
+set breakindent
+set emoji
 set hidden
 set shortmess=atI
-set wildignore+=*.o,*.obj,.git,*.a,*.so,*.lo,*.class,*.beam,deps/*,Mnesia.*,*.hi,vendor/*,copycat/*,target/*
+set wildignore+=*.o,*.obj,.git,*.a,*.so,*.lo,*.class,*.beam,deps/*,Mnesia.*,*.hi,vendor/*,copycat/*,target/*,_build/*
 let mapleader=";"
 let maplocaleader="\\"
 set notimeout
@@ -167,7 +174,7 @@ set ttyfast
 set lazyredraw
 set synmaxcol=800
 set clipboard=unnamed
-set nonu
+set nu
 set rnu
 
 set fileencodings=utf-8,latin1
@@ -403,10 +410,10 @@ function StatusLine_new()
 	call map(range(1, winnr('$')), 'StatusLine_id(v:val)')
 endfunction
 
-"autocmd BufWritePost * call StatusLine_git()
-"autocmd BufReadPost *  call StatusLine_git()
-"autocmd WinEnter *  call StatusLine_git()
-"autocmd VimEnter * call StatusLine_git()
+autocmd BufWritePost * call StatusLine_git()
+autocmd BufReadPost *  call StatusLine_git()
+autocmd WinEnter *  call StatusLine_git()
+autocmd VimEnter * call StatusLine_git()
 
 set showmode
 set laststatus=2
@@ -455,11 +462,13 @@ nmap <Leader>y :YcmShowDetailedDiagnostic<CR>
 nmap <Leader>s :mksession! .vim.session<CR>
 nmap <Leader>n :nohlsearch<CR>
 
+nmap <Leader>Y :YcmDiags<CR>
+nmap <Leader>R :YcmCompleter ClearCompilationFlagCache<CR>:YcmForceCompileAndDiagnostics<CR>
+nmap <Leader>G :YcmComplete GoTo<CR>
+
 nmap <Leader>N :NERDTreeToggle<CR>
 nmap <Leader>T :TagbarToggle<CR>
 nmap <Leader>U :GundoToggle<CR>
-nmap <Leader>Y :YcmDiags<CR>
-nmap <Leader>R :YcmCompleter ClearCompilationFlagCache<CR>:YcmForceCompileAndDiagnostics<CR>
 nmap <Leader>S :SyntasticCheck<CR>
 
 vnoremap <silent> <Enter> :EasyAlign<CR>
@@ -503,8 +512,7 @@ let g:ycm_key_list_select_completion   = ['<Tab>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<Leader><Tab>', '<Up>']
 
 let g:ycm_min_num_of_chars_for_completion = 3
-
-let g:ycm_rust_src_path = '/home/meh/projects/nih/rust'
+let g:ycm_rust_src_path = $RUST_SRC_PATH
 
 set completeopt=menuone
 
@@ -518,6 +526,7 @@ let g:ycm_filetype_blacklist = {
 
 " Signify
 let g:signify_sign_overwrite = 1
+let g:signify_vcs_list = ["git"]
 
 " Rainbows
 let g:niji_darkblood_colours = [
@@ -535,9 +544,11 @@ let g:niji_darkblood_colours = [
 	\]
 
 " Command-T
-let g:CommandTMaxFiles          = 100000
-let g:CommandTMaxDepth          = 100
-let g:CommandTNeverShowDotFiles = 1
+let g:CommandTMaxFiles            = 100000
+let g:CommandTMaxDepth            = 100
+let g:CommandTNeverShowDotFiles   = 1
+let g:CommandTFileScanner         = "git"
+let g:CommandTGitIncludeUntracked = 1
 
 " cctree
 let g:CCTreeUsePerl        = 1
@@ -560,6 +571,11 @@ let g:startify_skiplist = [
              \ 'bundle/.*/doc' ,
              \ 'vimpager'
              \ ]
+
+" ack
+if executable('rg')
+	let g:ackprg = 'rg --vimgrep'
+endif
 
 " vimpager
 let vimpager_disable_x11 = 1
