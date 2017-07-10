@@ -91,6 +91,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'enomsg/vim-haskellConcealPlus'
+Plugin 'keith/swift.vim'
 
 call vundle#end()
 
