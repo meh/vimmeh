@@ -156,6 +156,7 @@ set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
 set undodir=~/.vim/tmp/undo
 set backup
+set switchbuf=usetab
 set undofile
 set undolevels=1000
 set undoreload=10000
@@ -175,7 +176,7 @@ set ttimeoutlen=10
 set ttyfast
 set lazyredraw
 set synmaxcol=800
-set clipboard=unnamed
+set clipboard=unnamedplus
 set nu
 set rnu
 
