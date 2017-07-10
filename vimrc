@@ -58,6 +58,7 @@ Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
 Plugin 'dbeniamine/vim-mail'
 Plugin 'metakirby5/codi.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Syntax
 "Plugin 'meh/nohomo'
